@@ -18,7 +18,6 @@ namespace ConsoleApplication5
         
         //Occupied Points
         private List<Point> _occupiedPoints = new List<Point>();
-
         public List<Point>  OccupiedPoints
         {
             get { return _occupiedPoints; }
@@ -26,14 +25,12 @@ namespace ConsoleApplication5
         }
         //Ship length
         public int Length { get; set; }
-        //is destroyed propertied
-        private bool _isDestroyed = false;
-
+        //Ss destroyed propertied
         public bool IsDestroyed
         {
-            get { return _isDestroyed = false; }
-            set { _isDestroyed = value; }
+            get { return OccupiedPoints.All(x => x.Status == Point.PointStatus.Hit); }
         }
+
 
         //CONTRUCTOR
         public Ship(ShipType type)
