@@ -61,7 +61,6 @@ textarea {
 }
 
 /* Added Style Classes*/
-/* Home page style */
 .container{
     border: 2px solid black;
     padding: 10px;
@@ -82,7 +81,15 @@ textarea {
     width: 30%;
     height: 30%;
 }
-
+.imgColum{
+    margin:auto;
+    padding: 0;
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    align-content:center;
+    margin:auto;
+}
 /* Footer */
 .footerNav{
     vertical-align:top;
