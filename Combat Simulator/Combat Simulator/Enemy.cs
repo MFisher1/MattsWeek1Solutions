@@ -11,7 +11,7 @@ namespace Combat_Simulator
         //PROPERTIES
         //health
        
-        private int _health;
+        private int _health = 200;
 
         public int Health
         {

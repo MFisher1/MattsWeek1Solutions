@@ -1,0 +1,6 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fun With Listz\Fun With Listz\bin\Debug\Fun With Listz.exe.config
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fun With Listz\Fun With Listz\bin\Debug\Fun With Listz.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fun With Listz\Fun With Listz\bin\Debug\Fun With Listz.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fun With Listz\Fun With Listz\obj\Debug\Fun With Listz.csprojResolveAssemblyReference.cache
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fun With Listz\Fun With Listz\obj\Debug\Fun With Listz.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fun With Listz\Fun With Listz\obj\Debug\Fun With Listz.pdb

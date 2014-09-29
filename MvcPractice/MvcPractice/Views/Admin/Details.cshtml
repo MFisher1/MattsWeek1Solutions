@@ -1,0 +1,17 @@
+﻿@model MvcPractice.Models.ContactForm
+
+@{
+    ViewBag.Title= "Details";
+    }
+
+<h2>Details</h2>
+
+Name: @Model.Name </br>
+Email: @Model.Email </br>
+Message: @Model.Message
+
+<p>
+    <a href="@Url.Action("Index", "Admin")">
+        Back To List
+    </a>
+</p>

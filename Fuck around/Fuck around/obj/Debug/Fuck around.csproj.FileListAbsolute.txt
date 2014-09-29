@@ -1,0 +1,6 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fuck around\Fuck around\bin\Debug\Fuck around.exe.config
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fuck around\Fuck around\bin\Debug\Fuck around.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fuck around\Fuck around\bin\Debug\Fuck around.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fuck around\Fuck around\obj\Debug\Fuck around.csprojResolveAssemblyReference.cache
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fuck around\Fuck around\obj\Debug\Fuck around.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Fuck around\Fuck around\obj\Debug\Fuck around.pdb

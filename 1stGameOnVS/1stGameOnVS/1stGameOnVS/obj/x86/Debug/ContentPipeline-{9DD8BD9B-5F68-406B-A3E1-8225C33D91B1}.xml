@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{9DD8BD9B-5F68-406B-A3E1-8225C33D91B1}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>Reach</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\1stGameOnVS\1stGameOnVS\1stGameOnVSContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\1stGameOnVS\1stGameOnVS\1stGameOnVS\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\1stGameOnVS\1stGameOnVS\1stGameOnVS\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\1stGameOnVS\1stGameOnVS\1stGameOnVS\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-08-28T15:05:20.2987131-06:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>

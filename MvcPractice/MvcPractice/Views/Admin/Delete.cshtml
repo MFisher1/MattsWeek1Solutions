@@ -1,0 +1,10 @@
+﻿@model MvcPractice.Models.ContactForm
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<p>Are you sure you want to delete?</p>
+<form action ="@Url.Action("DeleteConfirm", "Admin", new {id = Model.ContactFormID})" />
+<input type="submit" value ="You got that right buddy" />

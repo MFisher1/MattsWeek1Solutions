@@ -1,0 +1,7 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\bin\x86\Debug\Content\when-turtles-fly-L-EkTEMY.xnb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\bin\x86\Debug\Battleship.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\bin\x86\Debug\Battleship.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\obj\x86\Debug\Battleship.csprojResolveAssemblyReference.cache
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\obj\x86\Debug\Battleship.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Battleship\Battleship\Battleship\obj\x86\Debug\Battleship.pdb

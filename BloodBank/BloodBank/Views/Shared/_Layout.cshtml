@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+     <h1>Blood Bank </h1>
+    
+    <a href="@Url.Action("Index", "Home")">
+        Home
+     </a>
+    <a href="@Url.Action("Index", "Donor")">
+        Donors
+    </a>
+    <a href="@Url.Action("Index", "Patient")">
+        Patients
+    </a>
+    <a href="@Url.Action("Index", "BloodBank")">
+        BloodBanks
+    </a>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

@@ -1,0 +1,6 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\The Disemvowler\The Disemvowler\obj\Debug\The Disemvowler.csprojResolveAssemblyReference.cache
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\The Disemvowler\The Disemvowler\bin\Debug\The Disemvowler && Cashier.exe.config
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\The Disemvowler\The Disemvowler\bin\Debug\The Disemvowler && Cashier.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\The Disemvowler\The Disemvowler\bin\Debug\The Disemvowler && Cashier.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\The Disemvowler\The Disemvowler\obj\Debug\The Disemvowler && Cashier.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\The Disemvowler\The Disemvowler\obj\Debug\The Disemvowler && Cashier.pdb

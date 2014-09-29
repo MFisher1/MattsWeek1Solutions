@@ -1,0 +1,17 @@
+﻿@model BloodBank.Models.Donor
+
+@{
+    ViewBag.Title = "DonorDetails";
+}
+
+<h2>Details</h2>
+<ul>
+    <li>
+        Name: @Model.DonorName<br />
+        ID: @Model.DonorID<br />
+        Blood Type: @Model.DonnorBloodGroup<br />
+        Address: @Model.DonorAddress<br />
+        Number: @Model.DonorConatactNumber<br />
+        Medical Report: @Model.DonorMedicalReport
+    </li>
+</ul>

@@ -12,6 +12,7 @@ namespace Week3CodeChallenge
         {
             maxPrime(1001);
             Console.WriteLine(FibonacciSequencer(100000000));
+            LongestCollatz();
             Console.ReadKey();
         }
 
@@ -118,6 +119,48 @@ namespace Week3CodeChallenge
         }
         //End of numSuffix
      
+        //Longest Collatz Function
+        static void LongestCollatz()
+        {
+            //variables
+            List<int> longestSequence = new List<int>();
+            List<int> currentSequence = new List<int>();
+            int currentTerm;
+            //Loop through i to find collatz sequences up to a million
+            for (int i = 0; i < 1000000; i++)
+            {
+                //set current term to i, as it is the number being tested
+                currentTerm = i;
+                //loop until end of collatz sequence ends (current term = 1)
+                while (currentTerm > 1)
+                {
+                    //if term is even divide by 2
+                    if (currentTerm % 2 == 0)
+                    {
+                        currentTerm = currentTerm / 2;
+                    }
+                    // if term is odd * by 3 then add 1
+                    else
+                    {
+                        currentTerm = (currentTerm * 3) + 1;
+                    }
+                    currentSequence.Add(currentTerm);
+                }
+                //if current sequence is > than longest recorded sequence, replace it.
+                if (currentSequence.Count() > longestSequence.Count())
+                {
+                    longestSequence = currentSequence;
+                }   
+            }
+            //print longest sequence starting term'
+            
+            Console.WriteLine("Longest Collatz: " + longestSequence.First());
+            for (int i = 0; i < 10; i++)
+            {
+                Console.WriteLine(longestSequence[i]);
+            }
+        }
+        //End of Longest Collatz Function
         //End of Functions
     }
 }

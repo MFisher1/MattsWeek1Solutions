@@ -1,0 +1,6 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Digital Root\Digital Root\bin\Debug\Digital Root.exe.config
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Digital Root\Digital Root\bin\Debug\Digital Root.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Digital Root\Digital Root\bin\Debug\Digital Root.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Digital Root\Digital Root\obj\Debug\Digital Root.csprojResolveAssemblyReference.cache
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Digital Root\Digital Root\obj\Debug\Digital Root.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Digital Root\Digital Root\obj\Debug\Digital Root.pdb

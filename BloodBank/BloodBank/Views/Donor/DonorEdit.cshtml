@@ -1,0 +1,43 @@
+﻿@model BloodBank.Models.Donor
+
+@{
+    ViewBag.Title = "DonorEdit";
+}
+
+<h2>Edit</h2>
+<form>
+    <span>
+    @Html.HiddenFor(x => x.DonorID)
+        </span>
+<div>
+    @Html.LabelFor(x => x.DonorName)
+    @Html.TextBoxFor(x => x.DonorName)
+    @Html.ValidationMessageFor(x => x.DonorName)
+</div>
+
+<div>
+    @Html.LabelFor(x => x.DonnorBloodGroup)
+    @Html.TextBoxFor(x => x.DonnorBloodGroup)
+    @Html.ValidationMessageFor(x => x.DonnorBloodGroup)
+</div>
+
+<div>
+    @Html.LabelFor(x => x.DonorMedicalReport)
+    @Html.TextAreaFor(x => x.DonorMedicalReport)
+    @Html.ValidationMessageFor(x => x.DonorMedicalReport)
+</div>
+
+<div>
+    @Html.LabelFor(x => x.DonorAddress)
+    @Html.TextBoxFor(x => x.DonorAddress)
+    @Html.ValidationMessageFor(x => x.DonorAddress)
+</div>
+
+<div>
+    @Html.LabelFor(x => x.DonorConatactNumber)
+    @Html.TextBoxFor(x => x.DonorConatactNumber)
+    @Html.ValidationMessageFor(x => x.DonorConatactNumber)
+</div>
+</form>
+@Scripts.Render("~/bundles/jqueryval")
+<input type="submit" value="Submit" />

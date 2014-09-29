@@ -17,7 +17,7 @@ namespace Week1CodingChallenge
                 FizzBuzz(i);
             }
 
-            for (int i = 92; i >= 79; i--)
+            for (int i = 92; i >= 72; i--)
             {
                 FizzBuzz(i);
             }
@@ -175,6 +175,7 @@ namespace Week1CodingChallenge
             //variables
             int i = 1;
             int j = 1;
+            string output = "";
 
             //Figure out if prime
             //Loop numbers until L is reached
@@ -186,18 +187,19 @@ namespace Week1CodingChallenge
                     //If i is not prime
                     if (i % j == 0 && j != i && i != 1)
                     {
-                        Console.WriteLine(i);
+                        output+=i + ", ";
                         j = 1;
                         i++;
                     }
                     //i must be prime
                     else if (j == i)
                     {
-                        Console.WriteLine("X");
+                        output += i + " is prime, ";
                         j = 1;
                         i++;
                     }
                 }
+                Console.WriteLine(output);
             
          }
          //End of IsPrime  

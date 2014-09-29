@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <h1>Matthew Fisher's Portfolio</h1>
+    <a href="@Url.Action("Index", "Home")">
+        Home
+    </a>
+    &nbsp; &nbsp;
+    <a href="@Url.Action("Index", "About")">
+        About Me
+    </a>
+    &nbsp; &nbsp;
+    <a href="@Url.Action("Index", "Work")">
+        Work
+    </a>
+    &nbsp; &nbsp;
+    <a href="@Url.Action("Index", "Contact")">
+        Contact
+    </a>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+    <footer>
+    <p> Copyright 2014 Matt Fisher &nbsp; &nbsp &nbsp; &nbsp &nbsp; &nbsp </p>
+        <div class="footerNav">
+        <a href="@Url.Action("Index", "About")">About Me</a> &nbsp; <a href="@Url.Action("Index", "Work")">Work</a> &nbsp; <a href="@Url.Action("Index", "Contact")">Contact</a>
+        </div>
+    </footer>
+</html>

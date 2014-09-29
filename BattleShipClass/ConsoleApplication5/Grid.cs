@@ -280,9 +280,9 @@ namespace ConsoleApplication5
                     return true;
                 }
                 //loop to see if any points already contain a ship
-                for (int i = 1; i < shipToPlace.Length; i++)
+                for (int i = 0; i < shipToPlace.Length; i++)
                 {
-                    if (this.PlayerOcean[startX + i, startY].Status == Point.PointStatus.Ship)
+                    if (this.PlayerOcean[startY, startX +i].Status == Point.PointStatus.Ship)
                     {
                         return false;
                     }
@@ -301,7 +301,7 @@ namespace ConsoleApplication5
                     return true;
                 }
                 //loop to see if any points already contain a ship
-                for (int i = 1; i < shipToPlace.Length; i++)
+                for (int i = 0; i < shipToPlace.Length; i++)
                 {
                     if (this.PlayerOcean[startY, startX - i].Status == Point.PointStatus.Ship)
                     {
@@ -321,7 +321,7 @@ namespace ConsoleApplication5
                     return true;
                 }
                 //loop to see if any points already contain a ship
-                for (int i = 1; i < shipToPlace.Length; i++)
+                for (int i = 0; i < shipToPlace.Length; i++)
                 {
                     if (this.PlayerOcean[startY - i, startX].Status == Point.PointStatus.Ship)
                     {
@@ -342,7 +342,7 @@ namespace ConsoleApplication5
                     return true;
                 }
                 //loop to see if any points already contain a ship
-                for (int i = 1; i < shipToPlace.Length; i++)
+                for (int i = 0; i < shipToPlace.Length; i++)
                 {
                     if (this.PlayerOcean[startY, startX + i].Status == Point.PointStatus.Ship)
                     {
@@ -602,7 +602,7 @@ namespace ConsoleApplication5
         {
             //User Ocean
             //show ships in ocean if = true
-            bool showShips = true;
+            bool showShips = false;
             //Display Cordinates
             Console.WriteLine("  0   1   2   3   4   5   6   7   8   9");
             //loop through the length of the ocean for x and y and write to the console the status of each point

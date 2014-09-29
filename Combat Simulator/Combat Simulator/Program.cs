@@ -32,7 +32,9 @@ namespace Combat_Simulator
             //create player and enemy object
             Player Hero = new Player();
             Enemy Alduin = new Enemy();
-
+            Hero.Health = 100;
+         
+            
             //Start
             ChangeText("Drem Yol Yok Dovakin.", "Greetings Dragonborn");
             //pause code(for effect)
@@ -65,7 +67,9 @@ namespace Combat_Simulator
             Console.WriteLine("dg = dagger: does 15 damage but hits 100% of the time");
             //Figure out weapon variable
             Hero.Weapon = Hero.ChooseWeapon(Console.ReadLine());
+            
             //If weapon is invalid loop until it isnt
+           
             while (Hero.Weapon == "Invalid")
             {
                 Console.WriteLine("Invalid Choice, Pick Another Weapon");
@@ -76,7 +80,9 @@ namespace Combat_Simulator
             ChangeText("Bo Nu Dovah Kiin Ahrk Luft Hin Paal!", "Go Now Dragonborn And Face Your Foe!");
             System.Threading.Thread.Sleep(1000);
             Console.Clear();
-
+            
+            
+           
             while (Hero.Health != 0 && Alduin.Health != 0)
             {
                 //Basic Game Stats
@@ -129,6 +135,7 @@ namespace Combat_Simulator
             else if (Alduin.Health <= 0)
             {
                 ChangeText("Dovahkiin! Hi lost krinaan Alduin, sav keizaal ahrk lask hinmaar unahzaal praal ko Sovengaurd!", "Congradulations Dragonborn! You have slain Alduin, saved skyrim and earned yourself an eternal seat in Sovengaurd!");
+                AddHighScore(turn);
             }
             else if (Hero.Health <= 0)
             {
@@ -161,6 +168,25 @@ namespace Combat_Simulator
             }
          }
 
+        //Add HighScores FUnction
+        //Add highscore to list
+        static void AddHighScore(int playerScore)
+        {
+            Console.WriteLine("Your Name: ");
+            string playerName = Console.ReadLine();
+
+            //create a gateway to database
+            HighScoresEntities db = new HighScoresEntities();
+            //create new highscore
+            HighScore newHighScore = new HighScore();
+            newHighScore.Date = DateTime.Now;
+            newHighScore.Game = "Combat Simulator";
+            newHighScore.Name = playerName;
+            newHighScore.Score = playerScore;
+
+            //add to database
+            db.HighScores.Add(newHighScore);
+        }
        
     }
 }

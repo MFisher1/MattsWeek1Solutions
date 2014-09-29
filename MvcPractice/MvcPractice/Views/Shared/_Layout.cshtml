@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <h1>Matts Super Cool Website</h1>
+     <a href="@Url.Action("Index", "Home")">
+        Home
+     </a>
+    &nbsp; &nbsp;
+    <a href="@Url.Action("About", "Home")">
+        About
+    </a>
+    &nbsp; &nbsp;
+    <a href="@Url.Action("Index", "HighScores")">
+        High Scores
+    </a>
+    &nbsp; &nbsp;
+    <a href="@Url.Action("Index", "Contact")">
+        Contact Us
+    </a>
+     &nbsp; &nbsp;
+    <a href="@Url.Action("Index", "Admin")">
+        Admin
+    </a>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    @RenderBody()
+
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

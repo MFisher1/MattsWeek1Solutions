@@ -1,0 +1,12 @@
+﻿@model IEnumerable<BloodBank.Models.Donor>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Donors</h2>
+<ul>
+    @foreach (var item in Model)
+    {
+        <li> @item.DonorName - @item.DonnorBloodGroup-<a href ="@Url.Action("DonorDetails", "Donor",new {id= @item.DonorID})">Details</a>-<a href ="@Url.Action("DonorEdit", "Donor", new {id= @item.DonorID})">Edit</a></li>
+    }     
+</ul>

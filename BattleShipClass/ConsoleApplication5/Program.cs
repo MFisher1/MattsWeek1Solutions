@@ -12,8 +12,10 @@ namespace ConsoleApplication5
         
         static void Main(string[] args)
         {
+            //Cheater
+            bool Nuke = true;
             //Shots fired to keep track of score
-            int shotsFired = 0;
+            int shotsFired = 10;
            
             //Create a new grid
             Grid grid = new Grid();
@@ -54,9 +56,9 @@ namespace ConsoleApplication5
                 grid.PlaceEnemyShip(enemySubmarine, Grid.ShipDirection.Down, 7, 1);
                 grid.PlaceEnemyShip(enemyMinesweeper, Grid.ShipDirection.Left, 8, 8);
                 List<Ship> enemyShips = new List<Ship> { enemyCarrier, enemyBattleship, enemyCruiser, enemyMinesweeper, enemySubmarine };
-
+                
                 //Play Game
-                while (enemyShips.All(x => !x.IsDestroyed) || grid.UserShips.All(x => !x.IsDestroyed))
+                while (enemyShips.All(x => !x.IsDestroyed) || grid.UserShips.All(x => !x.IsDestroyed) || !Nuke)
                 {
                     //Display Ocean
                     Console.WriteLine("Player Ocean");
@@ -72,9 +74,9 @@ namespace ConsoleApplication5
                     Console.WriteLine("Press Enter To Continue");
                     Console.ReadKey();
                     shotsFired++;
-                    //
+                    
                 }
-                if (grid.UserShips.All(x => x.IsDestroyed))
+                if (grid.UserShips.All(x => x.IsDestroyed) || Nuke)
                 {
                     Console.WriteLine("All of our Ships Are Sunk, Prepare For a Water Grave Captain");
                 }

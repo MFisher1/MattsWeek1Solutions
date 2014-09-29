@@ -1,0 +1,15 @@
+﻿@model BloodBank.Models.Patient
+
+@{
+    ViewBag.Title = "PatientDetails";
+}
+
+<h2>PatientDetails</h2>
+<ul>
+    <li>
+        Name: @Model.Name<br />
+        ID: @Model.PatientID<br />
+        Blood Type: @Model.PatientBloodGroup<br />
+        Disease: @Model.PatientDisease<br />
+    </li>
+</ul>

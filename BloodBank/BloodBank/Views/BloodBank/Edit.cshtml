@@ -1,0 +1,31 @@
+﻿@model BloodBank.Models.BloodBank
+
+@{
+    ViewBag.Title = "BloodBankEdit";
+}
+
+<h2>Edit</h2>
+<form>
+    <span>
+    @Html.HiddenFor(x => x.BloodBankID)
+        </span>
+<div>
+    @Html.LabelFor(x => x.BloodBankName)
+    @Html.TextBoxFor(x => x.BloodBankName)
+    @Html.ValidationMessageFor(x => x.BloodBankName)
+</div>
+
+<div>
+    @Html.LabelFor(x => x.BloodBankAddress)
+    @Html.TextBoxFor(x => x.BloodBankAddress)
+    @Html.ValidationMessageFor(x => x.BloodBankAddress)
+</div>
+
+<div>
+    @Html.LabelFor(x => x.BloodBankContactNumber)
+    @Html.TextBoxFor(x => x.BloodBankContactNumber)
+    @Html.ValidationMessageFor(x => x.BloodBankContactNumber)
+</div>
+</form>
+@Scripts.Render("~/bundles/jqueryval")
+<input type="submit" value="Submit" />

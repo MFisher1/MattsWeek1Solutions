@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BloodBankModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BloodBankEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="BloodBanks" EntityType="BloodBankModel.BloodBank" />
+    <EntitySet Name="Donors" EntityType="BloodBankModel.Donor" />
+    <EntitySet Name="Patients" EntityType="BloodBankModel.Patient" />
+  </EntityContainer>
+  <EntityType Name="BloodBank">
+    <Key>
+      <PropertyRef Name="BloodBankID" />
+    </Key>
+    <Property Name="BloodBankID" Type="Int32" Nullable="false" />
+    <Property Name="BloodBankName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BloodBankAddress" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="BloodBankContactNumber" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="Donor">
+    <Key>
+      <PropertyRef Name="DonorID" />
+    </Key>
+    <Property Type="Int32" Name="DonorID" Nullable="false" />
+    <Property Type="String" Name="DonorName" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DonnorBloodGroup" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DonorMedicalReport" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="DonorAddress" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Type="Int32" Name="DonorConatactNumber" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="PatientID" />
+    </Key>
+    <Property Type="Int32" Name="PatientID" Nullable="false" />
+    <Property Type="String" Name="Name" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PatientBloodGroup" MaxLength="20" FixedLength="false" Unicode="true" />
+    <Property Type="String" Name="PatientDisease" MaxLength="20" FixedLength="false" Unicode="true" />
+  </EntityType>
+</Schema>

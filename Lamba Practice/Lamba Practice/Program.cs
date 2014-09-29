@@ -21,7 +21,7 @@ namespace LambdaPractice
             Console.WriteLine("print the kayakProducts to the console using a foreach loop.");
             foreach (var item in kayakProducts)
             {
-                Console.WriteLine(item.ToString());
+                Console.WriteLine(item);
             }
             Console.WriteLine();
 
@@ -58,18 +58,22 @@ namespace LambdaPractice
             products.Add("Couldnt think of anything else");
 
             //print the product with the longest name to the console using the .First() extension.
-            
+            Console.WriteLine("print the product with the longest name to the console using the .First() extension.");
             Console.WriteLine(string.Join(" ,",products.OrderBy(x => x.Length).First()));
             Console.WriteLine();
 
             //print the product with the shortest name to the console using OrderByDescending() and the .First() extension.
+            Console.WriteLine("print the product with the shortest name to the console using OrderByDescending() and the .First() extension.");
             Console.WriteLine(string.Join(" ,",products.OrderByDescending(x => x.Length).First()));
             Console.WriteLine();
+
             //print the product with the 4th shortest name to the console using an index or Skip/Take (you must convert the results to a list using .ToList()).
+            Console.WriteLine("print the product with the 4th shortest name to the console using an index or Skip/Take (you must convert the results to a list using .ToList()).");
             Console.WriteLine(string.Join(" ,",products.OrderByDescending(x => x.Length).Skip(4).Take(1)));
             Console.WriteLine();
 
             //print the ballProduct with the 2nd longest name to the console using an index or Skip/Take (you must convert the results to a list using .ToList()).
+            Console.WriteLine("print the ballProduct with the 2nd longest name to the console using an index or Skip/Take (you must convert the results to a list using .ToList()).");
             Console.WriteLine(string.Join(" ,",ballProducts.OrderBy(x => x.Length).Skip(2).Take(1)));
             Console.WriteLine();
 
@@ -78,14 +82,16 @@ namespace LambdaPractice
               
 
             //print out the reversedProducts to the console using a foreach loop.
+            Console.WriteLine("print out the reversedProducts to the console using a foreach loop.");
             foreach (var item in reversedProducts)
             {
-                Console.WriteLine(reversedProducts);
+                Console.WriteLine(item);
             }
             Console.WriteLine();
               
             //print out all the products ordered by the longest word first using the OrderByDecending() extension and a foreach loop.  
             //Note: you will not use a variable to store your list
+            Console.WriteLine("print out all the products ordered by the longest word first using the OrderByDecending() extension and a foreach loop.  ");
             foreach (var item in products.OrderByDescending(x => x.Length)) 
             {
                  

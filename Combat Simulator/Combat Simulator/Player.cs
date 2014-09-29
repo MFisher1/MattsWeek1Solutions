@@ -24,22 +24,22 @@ namespace Combat_Simulator
        //PROPERTIES
         
         //Health
-        private int _health;
+        private int _health = 100;
 
         public int Health
         {
             get { return _health; }
-            set { _health = 100; }
+            set { _health = value; }
         }
         
         
         //Is alive bool
-        private bool _isAlive;
+        private bool _isAlive = true;
 
         public bool IsAlive
         {
             get { return _isAlive; }
-            set { _isAlive = true; }
+            set { _isAlive = value; }
         }
         
         //rage

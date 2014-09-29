@@ -1,0 +1,2 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\ConsoleApplication1\ConsoleApplication1\bin\Debug\ConsoleApplication1.exe.config
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\ConsoleApplication1\ConsoleApplication1\bin\Debug\Week1CodingChallenge.exe.config

@@ -1,0 +1,6 @@
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Lambda Text Stat\Lambda Text Stat\bin\Debug\Lambda Text Stat.exe.config
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Lambda Text Stat\Lambda Text Stat\bin\Debug\Lambda Text Stat.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Lambda Text Stat\Lambda Text Stat\bin\Debug\Lambda Text Stat.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Lambda Text Stat\Lambda Text Stat\obj\Debug\Lambda Text Stat.csprojResolveAssemblyReference.cache
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Lambda Text Stat\Lambda Text Stat\obj\Debug\Lambda Text Stat.exe
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Lambda Text Stat\Lambda Text Stat\obj\Debug\Lambda Text Stat.pdb
