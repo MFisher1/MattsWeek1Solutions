@@ -26,6 +26,6 @@ C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\b
 C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\bin\System.Web.WebPages.xml
 C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\bin\System.Web.WebPages.Deployment.xml
 C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\bin\System.Web.WebPages.Razor.xml
-C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\obj\Debug\Portfolio.csprojResolveAssemblyReference.cache
 C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\obj\Debug\Portfolio.dll
 C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\obj\Debug\Portfolio.pdb
+C:\Users\Technologist\Documents\GitHub\MattsWeek1Solutions\Portfolio\Portfolio\obj\Debug\Portfolio.csprojResolveAssemblyReference.cache

@@ -61,17 +61,25 @@ textarea {
 }
 
 /* Added Style Classes*/
+/*General*/
+.colum-container{
+    margin-left:50px;
+}
+.homeNext{
+    cursor:pointer;
+}
+
 .container{
-    border: 2px solid black;
+    background-color:maroon;
+    border: 4px solid black;
     padding: 10px;
     margin:5px;
     align-content:center;  
 }
-.homeImg {
-    padding: 20px;
+.home {
+   padding: 20px;
     width: auto;
-    height: 50%;
-   
+    height: 50%; 
 }
 .colum{
     margin:auto;
@@ -81,7 +89,31 @@ textarea {
     width: 30%;
     height: 30%;
 }
-.imgColum{
+/*Image*/
+.hide{
+    display: none;
+}
+.active{
+    display:block;
+    text-decoration:underline;
+}
+.homeImg{
+    height:60%;
+
+}
+.imgColumLeft{
+    border:4px solid black;
+    display: inline-block;
+    width: 40%;
+    height: 40%;
+    align-content: center;
+    margin: 50px;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    margin-right: 6%;
+}
+.imgColumRight{
+    border:4px solid black;
     margin:auto;
     padding: 0;
     display: inline-block;

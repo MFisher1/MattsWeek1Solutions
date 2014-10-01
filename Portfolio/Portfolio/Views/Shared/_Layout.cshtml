@@ -22,12 +22,15 @@
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    
 </head>
 <body>
     @RenderBody()
 
     @Scripts.Render("~/bundles/jquery")
+    <script src="/scripts/main.js"></script>
     @RenderSection("scripts", required: false)
+    
 </body>
     <footer>
     <p> Copyright 2014 Matt Fisher &nbsp; &nbsp &nbsp; &nbsp &nbsp; &nbsp </p>
