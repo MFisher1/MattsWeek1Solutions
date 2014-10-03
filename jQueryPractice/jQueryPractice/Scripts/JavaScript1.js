@@ -14,7 +14,7 @@ $(document).ready(function () {
         //bind click event under each li
         var tabID = $(this).data("tab-id");
         //select active tab
-        var activeTab = $("active")
+        var activeTab = $("active");
         //select tab to activate
         var selectedTab = $("#" + tabID);
         //remove active class from active tab and add hide class to active tab
@@ -39,4 +39,53 @@ $(document).ready(function () {
         nextSlide.removeClass("hide").addClass("active");
     });
     //Carousel Functions End
+
+    //Ajax get
+    /*
+    $("#content .ajaxget").on("click", function () {
+        //to user ajax get, specify jquery.get
+        $.get("/ajaxget/cats", function (data) {
+            //replace content html with html returned from ajax get request
+            $("#content").html(data);
+        });
+    });
+    */
+    //Much better ajax code
+    $("#content").on("click", ".ajaxget", function () {
+        var urlRequest = $(this).data("url");
+        //to user ajax get, specify jquery.get
+        $.get(urlRequest, function (data) {
+            //replace content html with html returned from ajax get request
+            $("#content").html(data);
+        });
+    });
+
+    //ajax get for tabs
+    $("#tabs").on("click", ".tabsget", function () {
+        var urlRequest = $(this).data("url");
+        //to user ajax get, specify jquery.get
+        $.get(urlRequest, function (data) {
+            //replace content html with html returned from ajax get request
+            $("#tabcontent").html(data);
+        });
+    });
+
+    //Ajax Post for Contact Form
+    $("contactForm").on("submit", function (event) {
+        //Prevent default behavior of form upon clicking on submit
+        event.preventDefault();
+        //see if form is valid
+        if ($(this).valid())
+        {
+            //ajax post
+            var urlToPostTo = $(this).attr("action");
+            //serialize converts form fields into string that we can pass into our $.post() function
+            var dataToSend = $(this).serialize();
+            alert(dataToSend);
+            $.post(urlToPostTo, dataToSend, function (data) {
+                //update #container element with new html
+                $("#contianer").html(data);
+            });
+        }
+    });
 });

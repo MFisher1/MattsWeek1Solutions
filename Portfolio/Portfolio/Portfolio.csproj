@@ -139,6 +139,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Pictures\battleshippic1.png" />
+    <Content Include="Content\Pictures\battleshippic2.png" />
+    <Content Include="Content\Pictures\battleshippic3.png" />
     <Content Include="Content\Pictures\pikachu.jpg" />
     <Content Include="Content\Pictures\tw2.jpg" />
     <Content Include="Content\Pictures\tw3.jpg" />
@@ -234,6 +237,7 @@
     <Content Include="Views\About\Index.cshtml" />
     <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\Work\Index.cshtml" />
+    <Content Include="Views\Contact\ThankYou.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

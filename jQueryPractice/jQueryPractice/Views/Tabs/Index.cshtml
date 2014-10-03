@@ -2,21 +2,13 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Tabs Experiment</h2>
-<ul class="tabsSelection">
-    <li data-tabID="tab1">Tab 1</li>
-    <li data-tabID="tab2">Tab 2</li>
-    <li data-tabID="tab3">Tab 3</li>
+<h2>AJAX Tabs Experiment</h2>
+<ul id="tabs">
+    <li> <span class="tabsget" data-url="@Url.Action("tab1", "tabs")">Tab 1</span></li>
+    <li <span class="tabsget" data-url="@Url.Action("tab2", "tabs")">Tab 2</span></li>
+    <li><span class="tabsget" data-url="@Url.Action("tab3", "tabs")">Tab 3</li>
 </ul>
 
-<div id="tab1" class="active">
-    Tab 1 Content
-</div>
+<div id="tabcontent">
 
-<div id="tab2" class="hide">
-    Tab 2 Content
-</div>
-
-<div id="tab3" class="hide">
-    Tab 3 Content
 </div>

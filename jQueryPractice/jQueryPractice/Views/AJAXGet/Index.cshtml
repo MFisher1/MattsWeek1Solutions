@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Ajax Get</h2>
+<div id="content">
+    Im some text when you click this 
+    <span class="ajaxget" data-url="@Url.Action("cats","ajaxget")"><strong>link</strong></span>
+    some content will apear
+
+
+ If you like dogs I would click 
+<span class="ajaxget" data-url="@Url.Action("dogs","ajaxget")"><strong> dogs</strong></span>
+    instead.
+</div>

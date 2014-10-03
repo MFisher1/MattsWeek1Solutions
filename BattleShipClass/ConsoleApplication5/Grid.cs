@@ -262,6 +262,7 @@ namespace ConsoleApplication5
             //Variables
             //If any points in the area that you are placing the ship already contain a ship return false
             bool alreadyHasShip;
+            bool onShip = false;
             //if ships starting cordinates are out of bounds return false
             if (startX > 10 || startX < 0 || startY > 10 || startY < 0)
             {
@@ -269,86 +270,103 @@ namespace ConsoleApplication5
             }
             else if (direction == ShipDirection.Right)
             {
-                
-                //if the start X + the length of the ship (length of ship to the right) is off the grid return false 
-                if (startX + (shipToPlace.Length - 1) > 10 || startX + (shipToPlace.Length - 1) < 0)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-                //loop to see if any points already contain a ship
-                for (int i = 0; i < shipToPlace.Length; i++)
-                {
-                    if (this.PlayerOcean[startY, startX +i].Status == Point.PointStatus.Ship)
-                    {
-                        return false;
-                    }
-                }
-
-            }
-            else if (direction == ShipDirection.Left)
-            {
-                
-                if (startX - (shipToPlace.Length - 1) > 10 || startX - (shipToPlace.Length - 1) < 0)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-                //loop to see if any points already contain a ship
-                for (int i = 0; i < shipToPlace.Length; i++)
-                {
-                    if (this.PlayerOcean[startY, startX - i].Status == Point.PointStatus.Ship)
-                    {
-                        return false;
-                    }
-                }
-            }
-            else if (direction == ShipDirection.Up)
-            {
-                
-                if (startY - (shipToPlace.Length - 1) > 10 || startY - (shipToPlace.Length - 1) < 0)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
-                //loop to see if any points already contain a ship
-                for (int i = 0; i < shipToPlace.Length; i++)
-                {
-                    if (this.PlayerOcean[startY - i, startX].Status == Point.PointStatus.Ship)
-                    {
-                        return false;
-                    }
-                }
-            }
-            
-                
-            else if (direction == ShipDirection.Down)
-            {
-                if (startY + (shipToPlace.Length - 1) > 10 || startY + (shipToPlace.Length - 1) < 0)
-                {
-                    return false;
-                }
-                else
-                {
-                    return true;
-                }
                 //loop to see if any points already contain a ship
                 for (int i = 0; i < shipToPlace.Length; i++)
                 {
                     if (this.PlayerOcean[startY, startX + i].Status == Point.PointStatus.Ship)
                     {
-                        return false;
+                        onShip = false;
                     }
                 }
+                //if the start X + the length of the ship (length of ship to the right) is off the grid return false 
+                if (startX + (shipToPlace.Length - 1) > 10 || startX + (shipToPlace.Length - 1) < 0)
+                {
+                    return false;
+                }
+                else if (onShip)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                
+
+            }
+            else if (direction == ShipDirection.Left)
+            {
+                
+                for (int i = 0; i < shipToPlace.Length; i++)
+                {
+                    if (this.PlayerOcean[startY, startX - i].Status == Point.PointStatus.Ship)
+                    {
+                        onShip = false;
+                    }
+                } 
+                if (startX - (shipToPlace.Length - 1) > 10 || startX - (shipToPlace.Length - 1) < 0)
+                {
+                    return false;
+                }
+                else if (onShip)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+               
+            }
+            else if (direction == ShipDirection.Up)
+            {
+                for (int i = 0; i < shipToPlace.Length; i++)
+                {
+                    if (this.PlayerOcean[startY - i, startX].Status == Point.PointStatus.Ship)
+                    {
+                        onShip = false;
+                    }
+                }
+                if (startY - (shipToPlace.Length - 1) > 10 || startY - (shipToPlace.Length - 1) < 0)
+                {
+                    return false;
+                }
+                else if (onShip)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                
+               
+            }
+            
+                
+            else if (direction == ShipDirection.Down)
+            {
+                for (int i = 0; i < shipToPlace.Length; i++)
+                {
+                    if (this.PlayerOcean[startY, startX + i].Status == Point.PointStatus.Ship)
+                    {
+                        onShip= false;
+                    }
+                }
+                if (startY + (shipToPlace.Length - 1) > 10 || startY + (shipToPlace.Length - 1) < 0)
+                {
+                    return false;
+                }
+                else if (onShip)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+                //loop to see if any points already contain a ship
+                
             }
             else
             {
@@ -507,20 +525,28 @@ namespace ConsoleApplication5
                     
                     if (this.PlayerOcean[x, y].Status == Point.PointStatus.Miss)
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("[O] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     //Can us the name of enum as string, or as a pointstatus enum
                     else if (this.PlayerOcean[x, y].Status.ToString() == "Hit")
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("[X] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (this.PlayerOcean[x, y].Status == Point.PointStatus.Ship && showShips)
                     {
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         Console.Write("[S] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.Write("[ ] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
                 Console.WriteLine();
@@ -614,20 +640,28 @@ namespace ConsoleApplication5
 
                     if (this.EnemyOcean[x, y].Status == Point.PointStatus.Miss)
                     {
+                        Console.ForegroundColor = ConsoleColor.Green;
                         Console.Write("[O] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     //Can us the name of enum as string, or as a pointstatus enum
                     else if (this.EnemyOcean[x, y].Status.ToString() == "Hit")
                     {
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Write("[X] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else if (this.EnemyOcean[x, y].Status == Point.PointStatus.Ship && showShips)
                     {
+                        Console.ForegroundColor = ConsoleColor.Gray;
                         Console.Write("[S] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                     else
                     {
+                        Console.ForegroundColor = ConsoleColor.Cyan;
                         Console.Write("[ ] ");
+                        Console.ForegroundColor = ConsoleColor.White;
                     }
                 }
                 Console.WriteLine();

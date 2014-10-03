@@ -38,7 +38,7 @@ namespace MvcPractice.Controllers
             //sending an email 
             //step 1. add using system.net.mail
             //step 2. create a new message first
-            MailMessage message = new MailMessage("theRobots@seedpaths.com", "dustin@seedpaths.com");
+            MailMessage message = new MailMessage("theRobots@seedpaths.com", "mattfish490@gmail.com");
             //step 3. set subject
             message.Subject = "Contact request from";
             //step 4. construct the body with stringbuilder

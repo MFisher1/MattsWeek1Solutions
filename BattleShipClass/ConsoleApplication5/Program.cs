@@ -15,8 +15,9 @@ namespace ConsoleApplication5
             //Cheater
             bool Nuke = true;
             //Shots fired to keep track of score
-            int shotsFired = 10;
+            int shotsFired = 0;
            
+
             //Create a new grid
             Grid grid = new Grid();
             Point point = grid.PlayerOcean[1, 1];
@@ -33,6 +34,8 @@ namespace ConsoleApplication5
                 grid.AutoPlaceUserShips();
             }
              */
+            Console.SetWindowSize(100, 40);
+            Logo();
             Console.WriteLine("Press 'p' to play or 'h' for highscores");
             if (Console.ReadLine() == "h")
             {
@@ -40,6 +43,7 @@ namespace ConsoleApplication5
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.White;
                 Console.Clear();
                 //Place Users Ships
                 grid.DisplayPlayerOcean();
@@ -121,7 +125,6 @@ namespace ConsoleApplication5
             //get highscore list
             List<HighScore> HighScores = db.HighScores.Where(x => x.Game == "BattleShip")
                 .OrderByDescending(x => x.Score)
-                .Take(10)
                 .ToList();
 
             foreach (HighScore highscore in HighScores)
@@ -132,6 +135,22 @@ namespace ConsoleApplication5
                     highscore.Date.Value.ToShortDateString());
             }
             db.SaveChanges();
+        }
+
+        static void Logo() 
+        { 
+            Console.ForegroundColor = ConsoleColor.DarkMagenta;
+            Console.WriteLine("   __ __ __             ___               __               __          __            __ _ _  ");
+            Console.WriteLine(@" | |      \ \        /  / \  \       __ _|  |_ __     __ _|  |_ __    |  |          |   _ _|      ");
+            Console.WriteLine(@" | |__ __ / /       /  /___\  \     |__ _    _ __|   |__ _    _ __|   |  |          |  |___      ");
+            Console.WriteLine(@" | |      \ \      /  / ___ \  \         |  |             |  |        |  |__ _      |  |_ _               "); 
+            Console.WriteLine(@" | | __ __/ /     /  /       \  \        |__|             |__|        |__ __ _|     | _ __ |         ");
+            Console.WriteLine("                                                                          __                ");
+            Console.WriteLine("                   ____       __     __        __ __ __         _ ___    |  |       ");
+            Console.WriteLine(@"                 /  ___|     |  |___|  |      |__    __|       |   _  \  |  |          ");  
+            Console.WriteLine(@"                 \  \        |   ___   |         |  |          |   __ /  |__|             ");
+            Console.WriteLine(@"                __\  \       |  |   |  |       __|  |__        |  |                    ");
+            Console.WriteLine(@"               |____ /       |  |   |  |      |__ __ __|       |  |      (__)           ");
         }
         //End of Functions
 

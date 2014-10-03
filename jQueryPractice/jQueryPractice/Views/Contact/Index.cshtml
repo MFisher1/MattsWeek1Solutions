@@ -1,4 +1,4 @@
-﻿@model Portfolio.Models.Contact
+﻿@model jQueryPractice.Models.ContactForm
 
 @{
     ViewBag.Title = "Index";
@@ -12,7 +12,7 @@
     @Html.ValidationSummary(true)
 
     <fieldset>
-       
+        <legend>ContactForm</legend>
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Name)

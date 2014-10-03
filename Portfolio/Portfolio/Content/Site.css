@@ -1,7 +1,7 @@
 ﻿body {
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: #232323;
+    color: black;
     background-color: #fff;
 }
 
@@ -61,27 +61,26 @@ textarea {
 }
 
 /* Added Style Classes*/
-/*General*/
-.colum-container{
-    margin-left:50px;
-}
+/*Home Page*/
 .homeNext{
     cursor:pointer;
+    display:block;
 }
-
-.container{
+.homeContainer{
     background-color:maroon;
-    border: 4px solid black;
-    padding: 10px;
-    margin:5px;
-    align-content:center;  
+    border: 4px solid black; 
+    display:inline-block;
+  
 }
-.home {
+.homeImgContainer {
    padding: 20px;
     width: auto;
     height: 50%; 
 }
-.colum{
+.homeColumContainer{
+
+}
+.homeColum1{
     margin:auto;
     padding: 0px;
     display: inline-block;
@@ -89,39 +88,107 @@ textarea {
     width: 30%;
     height: 30%;
 }
-/*Image*/
+.homeColum2{
+    margin:auto;
+    padding: 0px;
+    display: inline-block;
+    border: 2px solid black;
+    width: 30%;
+    height: 30%;
+}
+.homeColum3{
+    margin:auto;
+    padding: 0px;
+    display: inline-block;
+    border: 2px solid black;
+    width: 30%;
+    height: 30%;
+}
+/*Work Page*/
+.workBackground{
+    background-color:maroon;
+    border: 4px solid black; 
+    width:100%;
+    height:100%; 
+}
+.workContainer{
+   margin-left:250px;
+}
+.workDivider{
+    display:block;
+}
+
+/*Work Caroucel*/
+.workCarousel1{
+ padding: 20px;   
+ display:inline-block;
+}
+.workCarousel2{
+    padding: 20px; 
+   display:inline-block;
+}
+.workCarousel3{
+    padding: 20px; 
+ display:inline-block;
+}
+.workCarousel4{
+    padding: 20px; 
+   display:inline-block;
+}
+.workImg1 {
+    
+    display:inline-block;
+}
+.workImg2 {
+    
+   display:inline-block;
+}
+.workImg3{
+    display:inline-block;
+}
+.workImg4{
+   display:inline-block;
+}
+.workNext1{
+    cursor:pointer;
+    display:inline-block;
+}
+.workNext2{
+    cursor:pointer;
+    display:inline-block;
+}
+.workNext3{
+    cursor:pointer;
+    display:inline-block;
+}
+.workNext4{
+    cursor:pointer;
+    display:inline-block;
+}
+/*About Page*/
+
+/*Shared*/
 .hide{
-    display: none;
+    display: none !important;
 }
 .active{
     display:block;
     text-decoration:underline;
 }
+
+
+
+
+
+
+
+/*Image*/
+
 .homeImg{
-    height:60%;
+    height:48%;
 
 }
-.imgColumLeft{
-    border:4px solid black;
-    display: inline-block;
-    width: 40%;
-    height: 40%;
-    align-content: center;
-    margin: 50px;
-    margin-bottom: 3%;
-    margin-top: 3%;
-    margin-right: 6%;
-}
-.imgColumRight{
-    border:4px solid black;
-    margin:auto;
-    padding: 0;
-    display: inline-block;
-    width: 40%;
-    height: 40%;
-    align-content:center;
-    margin:auto;
-}
+
 /* Footer */
 .footerNav{
     vertical-align:top;

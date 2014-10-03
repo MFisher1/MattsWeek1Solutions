@@ -16,5 +16,20 @@ namespace jQueryPractice.Controllers
             return View();
         }
 
+        public ActionResult Tab1()
+        {
+            return Content("This is the land of tab 1");
+        }
+
+        public ActionResult Tab2() 
+        {
+            return Content("This is the land of tab 2");
+        }
+
+        public ActionResult Tab3()
+        {
+            return Content("This is the land of tab 3");
+        }
+
     }
 }
