@@ -8,9 +8,9 @@ $(document).ready(function () {
         $(this).css('color', 'red').css('backgroud-color', 'purple')
     });
     */
-
+   
     /*Tab function Start*/
-    $(".tabSelection li").on("click", function () {
+    $(".tabs li").on("click", function () {
         //bind click event under each li
         var tabID = $(this).data("tab-id");
         //select active tab
@@ -24,7 +24,7 @@ $(document).ready(function () {
         selectedTab.removeClass("hide").addClass("active");
 
     });
-    /*Tab function End*/
+    //End of tab function
 
     //Carousel Functions Start
     $(".carousel-next").on("click", function () {

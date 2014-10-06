@@ -16,5 +16,10 @@ namespace Portfolio.Controllers
             return View();
         }
 
+        public ActionResult Battleship()
+        {
+            return View();
+        }
+
     }
 }

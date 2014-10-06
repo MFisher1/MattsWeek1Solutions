@@ -2,7 +2,7 @@
     font-size: .85em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: black;
-    background-color: #fff;
+    background-color: #808080;
 }
 
 header, footer, nav, section {
@@ -62,13 +62,16 @@ textarea {
 
 /* Added Style Classes*/
 /*Home Page*/
+.homeImg{
+    margin-left:60px;
+    width:1412px;
+    height:400px;
+}
 .homeNext{
     cursor:pointer;
     display:block;
 }
 .homeContainer{
-    background-color:maroon;
-    border: 4px solid black; 
     display:inline-block;
   
 }
@@ -76,9 +79,10 @@ textarea {
    padding: 20px;
     width: auto;
     height: 50%; 
+    margin-right:50px;
 }
 .homeColumContainer{
-
+    margin-left:65px;
 }
 .homeColum1{
     margin:auto;
@@ -106,13 +110,11 @@ textarea {
 }
 /*Work Page*/
 .workBackground{
-    background-color:maroon;
-    border: 4px solid black; 
     width:100%;
     height:100%; 
 }
 .workContainer{
-   margin-left:250px;
+   margin-left:140px;
 }
 .workDivider{
     display:block;
@@ -175,20 +177,15 @@ textarea {
     display:block;
     text-decoration:underline;
 }
-
-
-
-
-
-
-
-/*Image*/
-
-.homeImg{
-    height:48%;
-
+.button{
+box-shadow: white 5px 5px 5px 5px inset;
+width: 50px;
+height: 25px;
+color:purple !important;
+background-color:gray;
+border: solid black 3px;  
+text-decoration:none !important;
 }
-
 /* Footer */
 .footerNav{
     vertical-align:top;

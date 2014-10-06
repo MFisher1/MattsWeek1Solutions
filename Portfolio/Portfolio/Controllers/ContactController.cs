@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Mvc;
 using System.Net.Mail;
 
-namespace MvcPractice.Controllers
+namespace Portfolio.Controllers
 {
     public class ContactController : Controller
     {

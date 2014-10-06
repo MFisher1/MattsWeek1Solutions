@@ -1,0 +1,120 @@
+﻿body {
+    font-size: .85em;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #232323;
+    background-color: #fff;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*Added Styel*/
+/*Home*/
+.containerHome{
+
+}
+.homeImg{
+    width:100%;
+    height:50%;
+}
+.homeColum1{
+    margin-left:100px;
+    display:inline-block;
+    height:40%;
+    width:30%;
+    border:3px solid black;
+}
+.homeColum2{
+    display:inline-block;
+    height:40%;
+    width:30%;
+    border:3px solid black;
+}
+.homeColum3{
+    display:inline-block;
+    height:40%;
+    width:30%;
+    border:3px solid black;
+}
+/*About*/
+.aboutTab{
+    cursor:pointer;
+    display:inline-block;
+    border:2px solid black;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding:5px;
+    width:36px;
+    height:15px;
+}
+/*Work*/
+.workImgContainer{
+    margin-left:100px;
+}
+.workImg{
+    display:inline-block;
+    width:40%;
+    height:30%;
+    margin:50px;
+}
+
+/*Shared*/
+.hide{
+    display: none;
+}
+.active{
+    display:block;
+    text-decoration:underline;
+}

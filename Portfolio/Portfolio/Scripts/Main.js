@@ -1,18 +1,17 @@
 ﻿$(document).ready(function () {
-    $(".homeNext").on("click", function () {
-        //get active slide
-        var activeSlide = $(".active");
-        //go to next slide
-        var nextSlide = $(activeSlide).next();
-        if (!nextSlide.hasClass("hide")) {
-            nextSlide = $(".homeImg").first();
-        }
-        activeSlide.removeClass("active").addClass("hide");
-        nextSlide.removeClass("hide").addClass("active");
-    });
-});
+    //home slide show
+    setInterval(function () {
+            //get active slide
+            var activeSlide = $(".homeImg.active");
+            //go to next slide
+            var nextSlide = $(activeSlide).next();
+            if (!nextSlide.hasClass("hide")) {
+                nextSlide = $(".homeImg").first();
+            }
+            activeSlide.removeClass("active").addClass("hide");
+            nextSlide.removeClass("hide").addClass("active");
+    }, 3000);
     /*Image 1 carousel */ 
-    $(document).ready(function () {
         $(".workNext1").on("click", function () {
             //get active slide
             var activeSlide = $(".active.workImg1");
@@ -24,10 +23,8 @@
             activeSlide.removeClass("active").addClass("hide");
             nextSlide.removeClass("hide").addClass("active");
         });
-    });
     /*Image 1 carousel end*/
     /*Image 2 carousel */
-    $(document).ready(function () {
         $(".workNext2").on("click", function () {
             //get active slide
             var activeSlide = $(".active.workImg2");
@@ -39,10 +36,8 @@
             activeSlide.removeClass("active").addClass("hide");
             nextSlide.removeClass("hide").addClass("active");
         });
-    });
     /*Image 2 carousel end*/
     /*Image 3 carousel */
-    $(document).ready(function () {
         $(".workNext3").on("click", function () {
             //get active slide
             var activeSlide = $(".active.workImg3");
@@ -54,10 +49,9 @@
             activeSlide.removeClass("active").addClass("hide");
             nextSlide.removeClass("hide").addClass("active");
         });
-    });
     /*Image 3 carousel end*/
     /*Image 4 carousel*/
-    $(document).ready(function () {
+
         $(".workNext4").on("click", function () {
             //get active slide
             var activeSlide = $(".active.workImg4");
@@ -69,11 +63,10 @@
             activeSlide.removeClass("active").addClass("hide");
             nextSlide.removeClass("hide").addClass("active");
         });
-    });
     /*Image 4 carousel end*/
 
 //Ajax Post for Contact Form
-    $(document).ready(function(){
+   
         $("contactForm").on("submit", function (event) {
             //Prevent default behavior of form upon clicking on submit
             event.preventDefault();
