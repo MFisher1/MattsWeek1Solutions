@@ -63,7 +63,8 @@ textarea {
 /*Added Styel*/
 /*Home*/
 .containerHome{
-
+    width:100%;
+    height:100%;
 }
 .homeImg{
     width:100%;
@@ -101,13 +102,13 @@ textarea {
 }
 /*Work*/
 .workImgContainer{
-    margin-left:100px;
+    margin-left:230px;
 }
 .workImg{
-    display:inline-block;
-    width:40%;
-    height:30%;
-    margin:50px;
+    display: inline-block;
+width: 500px;
+height: 400px;
+margin: 20px;
 }
 
 /*Shared*/
@@ -117,4 +118,8 @@ textarea {
 .active{
     display:block;
     text-decoration:underline;
+}
+.pageLink{
+    display:inline-block;
+    cursor:pointer;
 }

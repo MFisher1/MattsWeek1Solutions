@@ -2,21 +2,14 @@
 <html>
 <head>
     <h1>Week 6 Coding Challenge</h1>
-    <a href="@Url.Action("Index", "Home")">
-        Home
-    </a>
     &nbsp; &nbsp;
-    <a href="@Url.Action("Index", "About")">
-        About Me
-    </a>
+<div class="pageLink" id="page" data-url="@Url.Action("Index","Home")"><span><strong>Home</strong></span></div>
+       &nbsp; &nbsp;
+<div class="pageLink" id="tabs" data-url="@Url.Action("Index", "About")"><span><strong>About</strong></span></div>
     &nbsp; &nbsp;
-    <a href="@Url.Action("Index", "Work")">
-        Work
-    </a>
+<div class="pageLink" id="tabs" data-url="@Url.Action("Index", "Work")"><span><strong>Work</strong></span></div>
     &nbsp; &nbsp;
-    <a href="@Url.Action("Index", "Contact")">
-        Contact
-    </a>
+<div class="pageLink" id="tabs" data-url="@Url.Action("Index", "Contact")"><span><strong>Contact</strong></span></div>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
     <title>@ViewBag.Title</title>

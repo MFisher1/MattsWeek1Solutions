@@ -14,7 +14,7 @@ namespace Week6CodingChallenge.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            return View(new Week6CodingChallenge.Models.ContactForm());
+            return PartialView(new Week6CodingChallenge.Models.ContactForm());
         }
 
         //[HttpPost]

@@ -28,4 +28,14 @@
         });
     });
 
+    //ajax get site
+    $(".pageLink").on("click", function () {
+        var urlRequest = $(this).data("url");
+        //to user ajax get, specify jquery.get
+        $.get(urlRequest, function (data) {
+            //replace content html with html returned from ajax get request
+            $("#siteContent").html(data);
+        });
+    });
+
 });
