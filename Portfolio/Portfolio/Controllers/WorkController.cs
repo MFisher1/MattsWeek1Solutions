@@ -21,5 +21,19 @@ namespace Portfolio.Controllers
             return View();
         }
 
+        public ActionResult CombatSimulator()
+        {
+            return View();
+        }
+
+        public ActionResult BlackJack()
+        {
+            return View();
+        }
+
+        public ActionResult Hangman()
+        {
+            return View();
+        }
     }
 }

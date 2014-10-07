@@ -1,25 +1,27 @@
 ﻿@{
     ViewBag.Title = "Index";
 }
-
+<body background="../../Content/Pictures/parkourdog.png" >
+    &nbsp; &nbsp; &nbsp; &nbsp;
 <h2>Home</h2>
 <div class="container">
     <div class="homeImgContainer">
-        <img class="homeImg active"  align="center" src="../../Content/Pictures/tommorowworld.jpg" alt="img1"  />
-        <img class="homeImg hide" width="100%" height="100%" align="center" src="../../Content/Pictures/tw2.jpg" alt="img1"  />
-        <img class="homeImg hide" width="100%" height="100%" align="center" src="../../Content/Pictures/tw3.jpg" alt="img1"  />
+        <img class="slideImg homeImg active" align="center" src="../../Content/Pictures/parkourpic1.jpg" alt="img1"  />
+        <img class="slideImg homeImg hide" align="center" src="../../Content/Pictures/parkourpic2.jpg" alt="img1"  />
+        <img class="slideImg homeImg hide" align="center" src="../../Content/Pictures/skatepic1.jpg" alt="img1"  />
     </div>
      
     <div class="homeColumContainer">
     &nbsp; &nbsp;
-    <div class="homeColum1" align="center"><h3 align="center">About Me</h3><p>lorem ipsum. lorem ipsum. lorem ipsum. </p> <p>lorem ipsum. lorem ipsum.</p></div>
+    <div class="homeColum1" align="center"><strong><a href="@Url.Action("Index", "About")"><div><h2 align="center">About Me</h2></div></a><p>lorem ipsum. lorem ipsum. lorem ipsum. </p> <p>lorem ipsum. lorem ipsum.</p></strong></div>
             
      &nbsp; &nbsp;
         
-    <div class="homeColum2" align="center"><h3 align="center">Work </h3><p>lorem ipsum. lorem ipsum. lorem ipsum. </p> <p>lorem ipsum. lorem ipsum.</p></div>
+    <div class="homeColum2" align="center"><strong><h2 align="center"><a href="@Url.Action("Index", "Work")">Previous Work</a></h2><p>lorem ipsum. lorem ipsum. lorem ipsum. </p> <p>lorem ipsum. lorem ipsum.</p></strong></div>
             
      &nbsp; &nbsp;
         
-    <div class="homeColum3" align="center"><h3 align="center">About Me </h3><p>lorem ipsum. lorem ipsum. lorem ipsum. </p> <p>lorem ipsum. lorem ipsum.</p></div>
+    <div class="homeColum3" align="center"><strong><h2 align="center"><a href="@Url.Action("Index", "Career")">Carrerr</a></h2><p>lorem ipsum. lorem ipsum. lorem ipsum. </p> <p>lorem ipsum. lorem ipsum.</p></strong></div>
         </div> 
 </div>
+    </body>

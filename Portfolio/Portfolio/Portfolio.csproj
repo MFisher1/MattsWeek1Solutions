@@ -129,6 +129,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\CareerController.cs" />
     <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\WorkController.cs" />
@@ -144,7 +145,18 @@
     <Content Include="Content\Pictures\battleshippic1.png" />
     <Content Include="Content\Pictures\battleshippic2.png" />
     <Content Include="Content\Pictures\battleshippic3.png" />
+    <Content Include="Content\Pictures\combatSimPic1.png" />
+    <Content Include="Content\Pictures\combatSimPic2.png" />
+    <Content Include="Content\Pictures\combatSimPic3.png" />
+    <Content Include="Content\Pictures\parkourdog.png" />
+    <Content Include="Content\Pictures\parkourpic1.jpg" />
+    <Content Include="Content\Pictures\parkourpic2.jpg" />
     <Content Include="Content\Pictures\pikachu.jpg" />
+    <Content Include="Content\Pictures\rideordie.jpg" />
+    <Content Include="Content\Pictures\skatepic1.jpg" />
+    <Content Include="Content\Pictures\skatepic2.jpg" />
+    <Content Include="Content\Pictures\snowboardingpic1.jpg" />
+    <Content Include="Content\Pictures\snowboardingpic2.jpg" />
     <Content Include="Content\Pictures\tw2.jpg" />
     <Content Include="Content\Pictures\tw3.jpg" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
@@ -241,6 +253,8 @@
     <Content Include="Views\Work\Index.cshtml" />
     <Content Include="Views\Contact\ThankYou.cshtml" />
     <Content Include="Views\Work\Battleship.cshtml" />
+    <Content Include="Views\Career\Index.cshtml" />
+    <Content Include="Views\Work\CombatSimulator.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

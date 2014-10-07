@@ -1,16 +1,17 @@
 ﻿$(document).ready(function () {
-    //home slide show
+    //slide show
     setInterval(function () {
             //get active slide
-            var activeSlide = $(".homeImg.active");
+            var activeSlide = $(".slideImg.active");
             //go to next slide
             var nextSlide = $(activeSlide).next();
             if (!nextSlide.hasClass("hide")) {
-                nextSlide = $(".homeImg").first();
+                nextSlide = $(".slideImg").first();
             }
             activeSlide.removeClass("active").addClass("hide");
             nextSlide.removeClass("hide").addClass("active");
     }, 3000);
+
     /*Image 1 carousel */ 
         $(".workNext1").on("click", function () {
             //get active slide

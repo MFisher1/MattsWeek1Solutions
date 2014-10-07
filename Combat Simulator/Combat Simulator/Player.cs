@@ -60,7 +60,7 @@ namespace Combat_Simulator
         public string Name { get; set; }
 
         //health potions
-        private int _healthPotions;
+        private int _healthPotions=4;
 
         public int HealthPotions
         {

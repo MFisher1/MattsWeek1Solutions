@@ -11,12 +11,12 @@ namespace Combat_Simulator
         //PROPERTIES
         //health
        
-        private int _health = 200;
+        private int _health = 100;
 
         public int Health
         {
             get { return _health ; }
-            set { _health = 200; }
+            set { _health = 100; }
         }
 
         //rage
