@@ -3,6 +3,7 @@
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
     color: black;
     font-weight:bold;
+   
 }
 
 header, footer, nav, section {
@@ -236,6 +237,7 @@ textarea {
 }
 /*About Page*/
 .aboutContainer{
+    /*background-color:rgba(255, 255, 255, .5);*/
 }
 /*Shared*/
 .hide{
@@ -247,20 +249,27 @@ textarea {
 }
 .button{
     margin-bottom:30px;
-box-shadow: white 5px 5px 5px 5px inset;
-width: 80px;
-height: 25px;
-color:black !important;
-background-color:gray;
-border: solid black 3px;  
-text-decoration:none !important;
-display:inline-block;
+    text-shadow: 3px 3px 2px grey;
+    width: 80px;
+    height: 25px;
+    color:black !important;
+    background-color:white;
+    border: solid black 3px;  
+    text-decoration:none !important;
+    display:inline-block;
+    cursor:pointer;
+}
+.button:hover{
+    transition:all ease-in-out .4s;
+    box-shadow: 0px 0px 15px black;
+    border-radius:5px;
 }
 .siteBackground{
-    
+    background-color:rgba(255,255,255, .5);
+    z-index:10000;
 }
 .divider{
-    margin:120px;
+    margin:80px;
 }
 /* Footer */
 .footerNav{

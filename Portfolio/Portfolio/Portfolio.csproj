@@ -148,6 +148,7 @@
     <Content Include="Content\Pictures\combatSimPic1.png" />
     <Content Include="Content\Pictures\combatSimPic2.png" />
     <Content Include="Content\Pictures\combatSimPic3.png" />
+    <Content Include="Content\Pictures\IMG_20140910_175931.jpg" />
     <Content Include="Content\Pictures\parkourdog.png" />
     <Content Include="Content\Pictures\parkourpic1.jpg" />
     <Content Include="Content\Pictures\parkourpic2.jpg" />
@@ -255,6 +256,8 @@
     <Content Include="Views\Work\Battleship.cshtml" />
     <Content Include="Views\Career\Index.cshtml" />
     <Content Include="Views\Work\CombatSimulator.cshtml" />
+    <Content Include="Views\Work\BlackJack.cshtml" />
+    <Content Include="Views\Work\Hangman.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
