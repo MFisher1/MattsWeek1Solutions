@@ -66,6 +66,22 @@
         });
     /*Image 4 carousel end*/
 
+    //Prev button
+    //workimg1
+        $('.workPrev1').on('click', function () {
+            alert("this works!");
+            var activeSlide = $('.workImg1.active');
+            if (activeSlide == $('workImg1').first()) {
+                nextSlide = $('.workImg1').last();
+            }
+            else {
+                var nextSlide = activeSlide.prev();
+            }
+            activeSlide.removeClass('active').addClass('hide');
+            nextSlide.removeClass('hide').addClass('active');
+        });
+
+
 //Ajax Post for Contact Form
    
         $("contactForm").on("submit", function (event) {

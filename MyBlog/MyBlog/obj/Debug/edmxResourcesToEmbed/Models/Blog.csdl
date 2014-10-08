@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityContainer Name="BlogEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Authors" EntityType="BlogModel.Author" />
+    <EntitySet Name="Comments" EntityType="BlogModel.Comment" />
+    <EntitySet Name="Posts" EntityType="BlogModel.Post" />
+    <AssociationSet Name="FK_Posts_Authors" Association="BlogModel.FK_Posts_Authors">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Posts" EntitySet="Posts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Comments" Association="BlogModel.FK_Comments_Comments">
+      <End Role="Comments" EntitySet="Comments" />
+      <End Role="Comments1" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Posts" Association="BlogModel.FK_Comments_Posts">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Posts_Posts" Association="BlogModel.FK_Posts_Posts">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Posts1" EntitySet="Posts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Author">
+    <Key>
+      <PropertyRef Name="AuthorID" />
+    </Key>
+    <Property Name="AuthorID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ImgUrl" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="UserName" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <NavigationProperty Name="Post" Relationship="BlogModel.FK_Posts_Authors" FromRole="Authors" ToRole="Posts" />
+  </EntityType>
+  <EntityType Name="Comment">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="PostID" Type="Int32" Nullable="false" />
+    <Property Name="Body" Type="String" MaxLength="200" Unicode="true" FixedLength="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Comments1" Relationship="BlogModel.FK_Comments_Comments" FromRole="Comments" ToRole="Comments1" />
+    <NavigationProperty Name="Comment1" Relationship="BlogModel.FK_Comments_Comments" FromRole="Comments1" ToRole="Comments" />
+    <NavigationProperty Name="Post" Relationship="BlogModel.FK_Comments_Posts" FromRole="Comments" ToRole="Posts" />
+  </EntityType>
+  <EntityType Name="Post">
+    <Key>
+      <PropertyRef Name="PostID" />
+    </Key>
+    <Property Name="PostID" Type="Int32" Nullable="false" />
+    <Property Name="Body" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="DateCreated" Type="DateTime" Precision="0" />
+    <Property Name="AuthorID" Type="Int32" />
+    <Property Name="Title" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="ImgUrl" Type="String" MaxLength="50" Unicode="true" FixedLength="false" />
+    <Property Name="Likes" Type="Int32" />
+    <NavigationProperty Name="Author" Relationship="BlogModel.FK_Posts_Authors" FromRole="Posts" ToRole="Authors" />
+    <NavigationProperty Name="Comment" Relationship="BlogModel.FK_Comments_Posts" FromRole="Posts" ToRole="Comments" />
+    <NavigationProperty Name="Posts1" Relationship="BlogModel.FK_Posts_Posts" FromRole="Posts" ToRole="Posts1" />
+    <NavigationProperty Name="Post1" Relationship="BlogModel.FK_Posts_Posts" FromRole="Posts1" ToRole="Posts" />
+  </EntityType>
+  <Association Name="FK_Posts_Authors">
+    <End Role="Authors" Type="BlogModel.Author" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Posts" Type="BlogModel.Post" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="AuthorID" />
+      </Principal>
+      <Dependent Role="Posts">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Comments">
+    <End Role="Comments" Type="BlogModel.Comment" Multiplicity="1" />
+    <End Role="Comments1" Type="BlogModel.Comment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Comments">
+        <PropertyRef Name="CommentID" />
+      </Principal>
+      <Dependent Role="Comments1">
+        <PropertyRef Name="CommentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Posts">
+    <End Role="Posts" Type="BlogModel.Post" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comments" Type="BlogModel.Comment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Posts">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="CommentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Posts_Posts">
+    <End Role="Posts" Type="BlogModel.Post" Multiplicity="1" />
+    <End Role="Posts1" Type="BlogModel.Post" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Posts">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Posts1">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

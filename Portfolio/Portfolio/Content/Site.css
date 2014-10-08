@@ -239,6 +239,12 @@ textarea {
 .aboutContainer{
     /*background-color:rgba(255, 255, 255, .5);*/
 }
+.aboutImgContainer{
+       height: 360px;
+       width: 100px;
+       margin-left: 470px;
+       display: block;
+}
 /*Shared*/
 .hide{
     display: none !important;

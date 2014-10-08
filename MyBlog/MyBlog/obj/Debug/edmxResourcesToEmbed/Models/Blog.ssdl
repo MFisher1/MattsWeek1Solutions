@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="BlogModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="BlogModelStoreContainer">
+    <EntitySet Name="Authors" EntityType="BlogModel.Store.Authors" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Comments" EntityType="BlogModel.Store.Comments" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="Posts" EntityType="BlogModel.Store.Posts" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="FK_Comments_Comments" Association="BlogModel.Store.FK_Comments_Comments">
+      <End Role="Comments" EntitySet="Comments" />
+      <End Role="Comments1" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Comments_Posts" Association="BlogModel.Store.FK_Comments_Posts">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Comments" EntitySet="Comments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Posts_Authors" Association="BlogModel.Store.FK_Posts_Authors">
+      <End Role="Authors" EntitySet="Authors" />
+      <End Role="Posts" EntitySet="Posts" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Posts_Posts" Association="BlogModel.Store.FK_Posts_Posts">
+      <End Role="Posts" EntitySet="Posts" />
+      <End Role="Posts1" EntitySet="Posts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Authors">
+    <Key>
+      <PropertyRef Name="AuthorID" />
+    </Key>
+    <Property Name="AuthorID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="50" />
+    <Property Name="UserName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Comments">
+    <Key>
+      <PropertyRef Name="CommentID" />
+    </Key>
+    <Property Name="CommentID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="PostID" Type="int" Nullable="false" />
+    <Property Name="Body" Type="nvarchar" MaxLength="200" />
+    <Property Name="DateCreated" Type="date" />
+  </EntityType>
+  <EntityType Name="Posts">
+    <Key>
+      <PropertyRef Name="PostID" />
+    </Key>
+    <Property Name="PostID" Type="int" Nullable="false" />
+    <Property Name="Body" Type="nvarchar(max)" />
+    <Property Name="DateCreated" Type="date" />
+    <Property Name="AuthorID" Type="int" />
+    <Property Name="Title" Type="nvarchar" MaxLength="50" />
+    <Property Name="ImgUrl" Type="nvarchar" MaxLength="50" />
+    <Property Name="Likes" Type="int" />
+  </EntityType>
+  <Association Name="FK_Comments_Comments">
+    <End Role="Comments" Type="BlogModel.Store.Comments" Multiplicity="1" />
+    <End Role="Comments1" Type="BlogModel.Store.Comments" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Comments">
+        <PropertyRef Name="CommentID" />
+      </Principal>
+      <Dependent Role="Comments1">
+        <PropertyRef Name="CommentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Comments_Posts">
+    <End Role="Posts" Type="BlogModel.Store.Posts" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Comments" Type="BlogModel.Store.Comments" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Posts">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Comments">
+        <PropertyRef Name="CommentID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Posts_Authors">
+    <End Role="Authors" Type="BlogModel.Store.Authors" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Posts" Type="BlogModel.Store.Posts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Authors">
+        <PropertyRef Name="AuthorID" />
+      </Principal>
+      <Dependent Role="Posts">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Posts_Posts">
+    <End Role="Posts" Type="BlogModel.Store.Posts" Multiplicity="1" />
+    <End Role="Posts1" Type="BlogModel.Store.Posts" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Posts">
+        <PropertyRef Name="PostID" />
+      </Principal>
+      <Dependent Role="Posts1">
+        <PropertyRef Name="PostID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
