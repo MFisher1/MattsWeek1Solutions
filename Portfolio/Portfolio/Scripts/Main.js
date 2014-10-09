@@ -69,16 +69,14 @@
     //Prev button
     //workimg1
         $('.workPrev1').on('click', function () {
-            alert("this works!");
+
             var activeSlide = $('.workImg1.active');
-            if (activeSlide == $('workImg1').first()) {
-                nextSlide = $('.workImg1').last();
-            }
-            else {
-                var nextSlide = activeSlide.prev();
+            var prevSlide = $(activeSlide).prev();
+            if (!prevSlide.hasClass("hide")) {
+                prevSlide = $(".workImg1").last();
             }
             activeSlide.removeClass('active').addClass('hide');
-            nextSlide.removeClass('hide').addClass('active');
+            prevSlide.removeClass('hide').addClass('active');
         });
 
 

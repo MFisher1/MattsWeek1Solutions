@@ -1,13 +1,18 @@
 ﻿body {
     font-size: 1.2em;
     font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
-    color: black;
+    color:black;
     font-weight:bold;
+    background-color:white;
+        text-shadow: 5px 5px 3px #808080;
    
 }
 
 header, footer, nav, section {
     display: block;
+    color:white;
+    background-color:black !important;
+    text-shadow:none !important;
 }
 
 a{
@@ -92,32 +97,31 @@ textarea {
     margin-left:65px;
 }
 .homeColum1{
-    margin:auto;
+     border: black 3px;
+    background-color: grey;
     padding: 0px;
     display: inline-block;
     width: 30%;
     height: 30%;
-    color:cyan !important;
-    text-decoration-color:black;
-    text-shadow: 5px 5px 5px black;
+    text-shadow: none;
 }
 .homeColum2{
-    margin:auto;
+     border: black 3px;
+    background-color: grey;
     padding: 0px;
     display: inline-block;
     width: 30%;
     height: 30%;
-    color:cyan;
-    text-shadow: 5px 5px 1px black;
+    text-shadow: none;
 }
 .homeColum3{
-    margin:auto;
+    border: black 3px;
+    background-color: grey;
     padding: 0px;
     display: inline-block;
     width: 30%;
     height: 30%;
-    color:cyan;
-    text-shadow: 5px 5px 1px black;
+    text-shadow: none;
 }
 /*Work Page*/
 .workBackground{
@@ -255,11 +259,12 @@ textarea {
 }
 .button{
     margin-bottom:30px;
-    text-shadow: 3px 3px 2px grey;
-    width: 80px;
+    text-shadow:none;
+    box-shadow: 3px 3px 2px grey;
+    width: 95px;
     height: 25px;
-    color:black !important;
-    background-color:white;
+    color:purple !important;
+    background-color:grey;
     border: solid black 3px;  
     text-decoration:none !important;
     display:inline-block;
@@ -271,8 +276,7 @@ textarea {
     border-radius:5px;
 }
 .siteBackground{
-    background-color:rgba(255,255,255, .5);
-    z-index:10000;
+
 }
 .divider{
     margin:80px;

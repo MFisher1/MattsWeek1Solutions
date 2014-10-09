@@ -51,6 +51,8 @@ namespace MyBlog.Controllers
         {
             if (ModelState.IsValid)
             {
+                post.DateCreated = DateTime.Now;
+                post.PostID = db.Posts.Count() + 1;
                 db.Posts.Add(post);
                 db.SaveChanges();
                 return RedirectToAction("Index");

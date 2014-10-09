@@ -21,21 +21,23 @@
             @Html.ValidationMessageFor(model => model.Body)
         </div>
 
+
         <div class="editor-label">
-            @Html.LabelFor(model => model.DateCreated)
+            @Html.LabelFor(model => model.Author.Name)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.DateCreated)
-            @Html.ValidationMessageFor(model => model.DateCreated)
+            @Html.EditorFor(model => model.Author.Name)
+            @Html.ValidationMessageFor(model => model.Author.Name)
         </div>
 
         <div class="editor-label">
-            @Html.LabelFor(model => model.AuthorID)
+            @Html.LabelFor(model => model.Author.AuthorID)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.AuthorID)
+            @Html.EditorFor(model => model.Author.AuthorID)
             @Html.ValidationMessageFor(model => model.AuthorID)
         </div>
+
 
         <div class="editor-label">
             @Html.LabelFor(model => model.Title)
@@ -49,7 +51,7 @@
             @Html.LabelFor(model => model.ImgUrl)
         </div>
         <div class="editor-field">
-            @Html.EditorFor(model => model.ImgUrl)
+            <input type="file" name="ImageUrl" id="Image" />
             @Html.ValidationMessageFor(model => model.ImgUrl)
         </div>
 

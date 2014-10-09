@@ -1,0 +1,66 @@
+﻿@model IEnumerable<MyBlog.Models.Post>
+@{
+    ViewBag.Title = "Index";
+}
+
+
+<body>
+    @foreach(var post in Model)
+    {
+    <h2>Index</h2>
+	<div>
+		<img class="thumb" src="@post.Author.ImgUrl">
+		<span>Post Title</span><br>
+		<small>By @post.Author.Name on @post.DateCreated</small>
+	</div>
+	<div>
+		
+		<img src="http://images.jpg">
+		
+		BODY
+
+	</div>
+	<div>
+		
+		<span>
+			@post.Likes
+		</span> 
+		
+	</div>
+
+	<div>
+		<span>
+		<span>Show</span> @post.Comment
+		</span>
+		
+		<div>
+			
+			 <div>
+				<span>@post.Comment
+					@post.Comment.DateCreated
+				</span>
+				<br>
+				<div>@post.Comment.Body</div>
+			</div><div>
+				<span>@post.Comment.Name
+					@post.Comment.DateCreated
+				</span>
+				<br>
+				<div>@post.Comment.Body</div>
+			</div>
+			
+			<form action="@Url.Action("AddComment","Home")">
+				<label>Your Name</label>
+				<input type="text" name="Name">
+				<br>
+				<label>Comment</label>
+				<textarea name="Body"></textarea>
+				<br>
+                <input type="hidden" name="PostID" value="@post.PostID" />
+				<input type="submit" value="Add Comment">
+			</form>
+		</div>
+
+	</div>
+    }
+</body>
